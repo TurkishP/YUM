@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "183139180392",
+    "firebase_url": "https://yum-db.firebaseio.com",
+    "project_id": "yum-db",
+    "storage_bucket": "yum-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183139180392:android:bf847067daeacdeb",
+        "android_client_info": {
+          "package_name": "com.example.yum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183139180392-lnkal5l3r8hjpsagfqkk5ru8i8imjgti.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.yum",
+            "certificate_hash": "2cef1d3ed13bc1a0fedff69eaae3cea3b0227817"
+          }
+        },
+        {
+          "client_id": "183139180392-blcmm6r2uak08d3ahnf5jvipqivage09.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI1cnCZx_DRjvopb12R2Wo_pxeCZKYr0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183139180392-blcmm6r2uak08d3ahnf5jvipqivage09.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
