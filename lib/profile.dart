@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'login.dart' as globals;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'login.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -17,9 +17,10 @@ class ProfilePage extends StatefulWidget {
 }
 
 class ProfilePageState extends State<ProfilePage> {
-
   @override
   Widget build(BuildContext context) {
+    print(widget.user);
+
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -31,7 +32,7 @@ class ProfilePageState extends State<ProfilePage> {
             },
           ),
           centerTitle: true,
-          title: Text('Profile Page', style: Theme.of(context).textTheme.title,),
+          title: Text('${globals.globalUser.displayName}', style: Theme.of(context).textTheme.title,),
           actions: <Widget>[
             IconButton(
               icon: Icon(

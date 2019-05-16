@@ -49,8 +49,7 @@ class AddRestaurantPageState extends State<AddRestaurantPage> {
 
     print(widget.user.uid);
 
-    return MaterialApp(
-      home: Scaffold(
+    return
 //        appBar: AppBar(
 //          backgroundColor: Theme.of(context).primaryColor,
 //          leading: IconButton(
@@ -101,7 +100,7 @@ class AddRestaurantPageState extends State<AddRestaurantPage> {
 //            ),
 //          ],
 //        ),
-        body: ListView(
+        ListView(
           padding: EdgeInsets.fromLTRB(40, 0, 40, 0.0),
           children: [
             Column(
@@ -175,8 +174,7 @@ class AddRestaurantPageState extends State<AddRestaurantPage> {
                   ),
                 ])
           ],
-        ),
-      ),
-    );
+        );
+
   }
 }

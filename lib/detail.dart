@@ -185,9 +185,9 @@ Widget _buildrestaurantDetails(BuildContext context, restaurant,
                 style: TextStyle(
                     color: Colors.blueAccent[50], height: 1, fontSize: 8),
               ),
-              (restaurant['updated_time'] != null)
+              (restaurant['modified_time'] != null)
                   ? Text(
-                "${restaurant['updated_time'].toString()} : Modified",
+                "${restaurant['modified_time'].toString()} : Modified",
                 style: TextStyle(
                     color: Colors.blueAccent[50], height: 1, fontSize: 8),
               )
@@ -253,32 +253,12 @@ Widget _buildBody(BuildContext context, FirebaseUser user, String restaurantName
 
 Widget _buildList(BuildContext context, restaurant,
     FirebaseUser user, String restaurantName, String documentID) {
-//  final restaurant = restaurant.fromSnapshot(
-//      snapshot.singleWhere((document) => document['name'] == restaurantName));
-
   SnackBar snackBar;
-//  final liked = restaurant.fromSnapshot(snapshot.singleWhere((document)=>document['name']==restaurantName).reference.collection('likedUser').document('${user.uid}').get());
+
   var dataExists = null;
-//  snapshot.singleWhere((document)=>document['name']==restaurantName).reference.collection('likedUser').document('${user.uid}').get().then((data){
-//    if (data.documentID.isNotEmpty) {
-//      print(data.documentID);
-//      print("WHAT IS GOING ON");
-//
-//      dataExists = true;
-//      print(dataExists);
-//    }
-//    else{
-//      dataExists = null;
-//      print("No such user");
-//    }
-//
-//
-//  });
+
   Firestore.instance.runTransaction((transaction) async {
-//    print(  "Getting new user's like info " +  Firestore.instance
-//        .collection("final")
-//        .document(documentID)
-//        .collection('likedUsers').document(user.uid).snapshots().singleWhere(test));
+
     Firestore.instance
         .collection("restaurant")
         .document(documentID)
@@ -308,7 +288,6 @@ Widget _buildList(BuildContext context, restaurant,
               Icons.thumb_up,
               color: Colors.red,
             ),
-            //TODO find a way to test if likedUsers collection exists and the user ID of the user exists as a document.
             onPressed: () {
               (dataExists == null)
                   ? Firestore.instance.runTransaction((transaction) async {

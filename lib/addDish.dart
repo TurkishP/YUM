@@ -48,8 +48,7 @@ class AddDishPageState extends State<AddDishPage> {
 
     print(widget.user.uid);
 
-    return MaterialApp(
-      home: Scaffold(
+    return
 //        appBar: AppBar(
 //          backgroundColor: Theme.of(context).primaryColor,
 //          leading: IconButton(
@@ -100,7 +99,7 @@ class AddDishPageState extends State<AddDishPage> {
 //            ),
 //          ],
 //        ),
-        body: ListView(
+        ListView(
           padding: EdgeInsets.fromLTRB(40, 0, 40, 0.0),
           children: [
             Column(
@@ -174,8 +173,8 @@ class AddDishPageState extends State<AddDishPage> {
                   ),
                 ])
           ],
-        ),
-      ),
-    );
+        );
+//      ),
+//    );
   }
 }

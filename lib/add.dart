@@ -24,7 +24,7 @@ class AddPageState extends State<AddPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 3, child: Scaffold(
+        length: 2, child: Scaffold(
         appBar: PreferredSize(child: AppBar(
           bottom: TabBar(
 
@@ -51,8 +51,8 @@ class AddPageState extends State<AddPage> {
           centerTitle: true,
           title: Text('ADD'),
           actions: <Widget>[
-            FlatButton(
-              onPressed: () {
+//            FlatButton(
+//              onPressed: () {
 //                (_image != null)
 //                    ? _uploadImage().whenComplete(() => {
 //                Firestore.instance.collection('restaurant').add({
@@ -83,11 +83,11 @@ class AddPageState extends State<AddPage> {
 //                  "like": 0,
 //                  "unlike": 0,
 //                });
-
-                Navigator.of(context).pop();
-              },
-              child: const Text('Save', style: TextStyle(color:Colors.white),),
-            ),
+//
+//                Navigator.of(context).pop();
+//              },
+////              child: const Text('Save', style: TextStyle(color:Colors.white),),
+//            ),
           ],
         ), preferredSize: Size.fromHeight(90.0),),
         body: TabBarView(
