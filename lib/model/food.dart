@@ -18,11 +18,8 @@ class Food {
 
   Food.fromMap(Map<String, dynamic> map, {this.reference})
       : assert(map['name'] != null),
-        assert(map['description'] != null),
-        assert(map['type'] != null),
-        assert(map['writer'] != null),
         assert(map['image'] != null),
-        assert(map['yum_count'] != null),
+
 
         writer = map['writer'],
         name = map['name'],

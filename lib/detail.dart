@@ -22,6 +22,8 @@ class DetailPageState extends State<DetailPage> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          backgroundColor: Theme.of(context).primaryColor,
+
           leading: IconButton(
             icon: const Icon(Icons.arrow_back),
             onPressed: () {
