@@ -225,35 +225,39 @@ Widget _buildReview(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(review.rest_name),
-            Column(
-              children: <Widget>[
-                Text("${review.view}"),
-              ],
-            ),
+            SizedBox(
+              height: 20,
+              width: 40,
+              child: RaisedButton(
+                padding: EdgeInsets.all(0),
+                child: const Text(
+                  'more',
+                  style: TextStyle(fontSize: 9),
+                ),
+                onPressed: () {
+//              Navigator.of(context).push(MaterialPageRoute(
+//                builder: (context) =>
+//                    DetailPage(restaurant: restaurant, user: user),
+//              ));
+                },
+              ),
+            )
           ],
         ),
         SizedBox(height: 3),
         Row(
           children: <Widget>[],
         ),
-        Row(children: [
-          SizedBox(
-            height: 20,
-            width: 40,
-            child: RaisedButton(
-              padding: EdgeInsets.all(0),
-              child: const Text(
-                'more',
-                style: TextStyle(fontSize: 9),
-              ),
-              onPressed: () {
-//              Navigator.of(context).push(MaterialPageRoute(
-//                builder: (context) =>
-//                    DetailPage(restaurant: restaurant, user: user),
-//              ));
-              },
-            ),
-          )
+        Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+
+          Column(
+            children: <Widget>[
+              Text("${review.writer}"),
+            ],
+          ),
+
         ]),
       ],
     ),
@@ -416,7 +420,7 @@ Widget _buildFood(
               onTap: () {
                 print("foodID we sent is ${food.reference.documentID}");
                 Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => FoodDetailPage(food: food, user: user, foodID: food.reference.documentID),
+                  builder: (context) => FoodDetailPage(foodName: food.name, user: user, foodID: food.reference.documentID),
                 ));
               },
               child: AspectRatio(

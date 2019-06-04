@@ -11,6 +11,11 @@ class CustomUser {
   final int age;
   final int level;
   final DateTime created_time;
+  final int eatenFoodCnt;
+  final int visitedRestCnt;
+  final int commentCnt;
+  final int yumPoint;
+
   final DocumentReference reference;
 
   CustomUser.fromMap(Map<String, dynamic> map, {this.reference})
@@ -18,12 +23,16 @@ class CustomUser {
 
         displayName = map['displayName'],
         description = map['description'],
+        eatenFoodCnt = map['eatenFoodCnt'],
+        visitedRestCnt = map['visitedRestCnt'],
+        commentCnt = map['commentCnt'],
         uid = map['uid'],
         age = map['age'],
         image = map['image'],
         created_time = map['created_time'],
         coverImg = map['coverImg'],
         eatenFoodCount = map['eatenFoodCount'],
+        yumPoint = map['yumPoint'],
         level = map['level'];
 
 

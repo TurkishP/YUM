@@ -7,6 +7,8 @@ class LikedFood {
   final String userID;
   final String name;
   final String image;
+  final String type;
+  final String cuisine;
 
   final DocumentReference reference;
 
@@ -17,8 +19,9 @@ class LikedFood {
 
         foodID = map['foodID'],
         name = map['name'],
-//        price = map['price'],
+        type = map['type'],
         userID = map['userID'],
+        cuisine = map['cuisine'],
         image = map['image'];
 
 
@@ -26,6 +29,6 @@ class LikedFood {
   LikedFood.fromSnapshot(DocumentSnapshot snapshot)
       : this.fromMap(snapshot.data, reference: snapshot.reference);
 
-  @override
-  String toString() => "Record<$name:$foodID>";
+//  @override
+//  String toString() => "Record<$name:$foodID>";
 }

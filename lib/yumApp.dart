@@ -48,11 +48,11 @@ class YumApp extends StatelessWidget {
           // Define the default TextTheme. Use this to specify the default
           // text styling for headlines, titles, bodies of text, and more.
           textTheme: TextTheme(
-            headline: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold, color: Colors.white),
+            headline: TextStyle(fontFamily: 'Righteous', fontSize: 72.0, fontWeight: FontWeight.bold, color: Colors.white, ),
             title: TextStyle(fontSize: 20.0, fontStyle: FontStyle.normal, color: Colors.white),
             body1: TextStyle(fontSize: 13.0, fontFamily: 'Hind', color: Colors.black),
             body2: TextStyle(fontSize: 15.0, fontFamily: 'Hind', color: Colors.black),
-            subhead: TextStyle(fontSize: 15.0, color: Colors.white),
+            subhead: TextStyle(fontSize: 20.0, color: Colors.white),
 
           ),
         ),

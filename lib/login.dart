@@ -36,19 +36,19 @@ class _LoginPageState extends State<LoginPage> {
     return DecoratedBox(
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/burger.jpg"), fit: BoxFit.cover),
+              image: AssetImage("assets/steak.jpg"), fit: BoxFit.cover),
         ),
         child: Column(
           children: [
             SizedBox(
-              height: 130,
+              height: 140,
             ),
             Text(
               "YUM",
               style: Theme.of(context).textTheme.headline,
             ),
             SizedBox(
-              height: 250,
+              height: 260,
             ),
             _GoogleSignInSection(),
           ],
@@ -69,28 +69,21 @@ class _GoogleSignInSectionState extends State<_GoogleSignInSection> {
     return Column(
       children: <Widget>[
         Container(
+//          height: 200,
+//          color: Colors.yellow[700],
           padding: const EdgeInsets.symmetric(vertical: 16.0),
           alignment: Alignment.center,
-          child: RaisedButton(
-            color: Colors.white,
-            onPressed: () async {
+          child:         GestureDetector(
+            onTap: () {
               _signInWithGoogle();
             },
-            child: const Text('Sign in with Google'),
+            child: Text(
+              "Signin With Google",
+              style: Theme.of(context).textTheme.subhead,
+            ),
           ),
         ),
-//        Container(
-//          alignment: Alignment.center,
-//          padding: const EdgeInsets.symmetric(horizontal: 16),
-//          child: Text(
-//            _success == null
-//                ? ''
-//                : (_success
-//                    ? 'Successfully signed in, uid: ' + _userID
-//                    : 'Sign in failed'),
-//            style: TextStyle(color: Colors.red),
-//          ),
-//        )
+
       ],
     );
   }
